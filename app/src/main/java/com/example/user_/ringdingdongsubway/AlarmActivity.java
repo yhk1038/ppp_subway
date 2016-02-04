@@ -121,6 +121,7 @@ public class AlarmActivity extends Activity implements OnClickListener{
         mAlarmMgr.cancel(pIntent);
     }
 
+
     @Override
     public void onResume(){
         super.onResume();
@@ -226,22 +227,6 @@ public class AlarmActivity extends Activity implements OnClickListener{
     }
 
 
-    public void onClick(View v) {
-        switch( v.getId() ) {
-            case R.id.btnAlarm1 :
-                // 1회 알람 시작 - 시간 간격 지정
-                onBtnAlarm1();
-                break;
-            case R.id.btnAlarm2 :
-                // 반복 알람 시작 - 특정 시간 지정
-                onBtnAlarm2();
-                break;
-            case R.id.btnStop :
-                // 알람 중지
-                onBtnStop();
-                break;
-        }
-    }
 
 
     public class MyLocationListener implements LocationListener{
@@ -262,17 +247,17 @@ public class AlarmActivity extends Activity implements OnClickListener{
             Log.e("TAGygg", t.getStaion_y() + "");
             Log.e("TAGlinegg", t.getStation_line() + "");
 
-            equals1 = equals(loc.getLongitude());
+
             if (loc.getLatitude() == loc.getLatitude() | loc.getLongitude() == loc.getLongitude()){
-                Toast.makeText(getApplicationContext(), "도착", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "도착", Toast.LENGTH_LONG).show();        // 위치 정보값이 목적지 위치에 일치하면 "도착"
             }else {
-                Toast.makeText(getApplicationContext(), "도착하지 않음", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "도착하지 않음", Toast.LENGTH_LONG).show();   // 위치 정보값이 목적지 위치에 일치하면 "도착하지 않음"
             }
 
             //Intent intent = new Intent(SetAlarmActivity.this, AlarmActivity.class);
         }
 
-        // 위치 정보값이 목적지 위치에 일치하면 호출된다.
+
 
         // 위치 제공자가 변경되었을 때 호출된다.
         @Override
