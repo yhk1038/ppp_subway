@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Non focused states -->
+    <item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/tab_strip_thin" />
+    <item android:state_focused="false" android:state_selected="true"  android:state_pressed="false" android:drawable="@drawable/tab_strip_bold" />
+
+    <!-- Focused states -->
+    <item android:state_focused="true" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/tab_strip_thin" />
+    <item android:state_focused="true" android:state_selected="true"  android:state_pressed="false" android:drawable="@drawable/tab_strip_bold" />
+
+    <!-- Pressed -->
+    <!--    Non focused states -->
+    <item android:state_focused="false" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/tab_strip_thin" />
+    <item android:state_focused="false" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/tab_strip_bold" />
+
+    <!--    Focused states -->
+    <item android:state_focused="true" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/tab_strip_thin" />
+    <item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/tab_strip_bold" />
+</selector>
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--<item>-->
+    <!--<shape android:shape="rectangle">-->
+        <!--<solid android:color="@color/colorPrimary" />-->
+    <!--</shape>-->
+<!--</item>-->
+<!--<item android:bottom="10dp">-->
+    <!--<shape android:shape="rectangle">-->
+        <!--<solid android:color="@color/colorMaterialOrange" />-->
+    <!--</shape>-->
+<!--</item>-->
+
+
+<!--</layer-list>-->
